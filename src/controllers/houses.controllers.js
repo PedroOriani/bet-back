@@ -13,3 +13,10 @@ async function read (req, res){
 
     res.send(houses)
 }
+
+const housesControllers = {
+    create,
+    read
+}
+
+export default housesControllers;
