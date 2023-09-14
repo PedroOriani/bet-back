@@ -7,7 +7,7 @@ async function verifyHouse(name){
 }
 
 async function create(name){
-    await db.query(`INSERT INTO houses (name) VALUES ($1);`, [name]);
+    return await db.query(`INSERT INTO houses (name) VALUES ($1);`, [name]);
 }
 
 async function read(){
