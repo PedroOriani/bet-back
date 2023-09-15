@@ -8,5 +8,8 @@ betRouter.post('/bets', validateSchema(betSchema));
 betRouter.get('/bets',)
 betRouter.get('/bets/:houseId',)
 betRouter.get('/bets/:sportId',)
+betRouter.get('/bets/:id')
+betRouter.put('/bets/:id', )
+betRouter.delete('/bets/:id', )
 
 export default betRouter;

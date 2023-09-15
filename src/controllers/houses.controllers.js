@@ -1,3 +1,4 @@
+import httpStatus from "http-status";
 import housesServices from "../services/houses.services"
 
 async function create (req, res){
@@ -5,13 +6,13 @@ async function create (req, res){
 
     await housesServices.create(name);
 
-    res.sendStatus(201)
+    res.sendStatus(httpStatus.CREATED);
 }
 
 async function read (req, res){
     const houses = await housesServices.read();
 
-    res.send(houses)
+    res.status(httpStatus.OK).send(houses)
 }
 
 const housesControllers = {
